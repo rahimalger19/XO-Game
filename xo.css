@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#dashbord{
+    width: 100%;
+    max-width: 490px;
+    height: 90px;
+    background: linear-gradient(135deg,#06b6d4,#3b82f6);
+    color: white;
+    border-radius: 15px;
+    font-size: 45px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,.35);
+    letter-spacing: 2px;
+}
+
+.board{
+    width: 100%;
+    max-width: 490px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.square{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #334155;
+    color: white;
+    border-radius: 15px;
+    font-size: 55px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s ease;
+    box-shadow: 0 8px 18px rgba(0,0,0,.3);
+}
+
+.square:hover{
+    background: #06b6d4;
+    transform: translateY(-5px) scale(1.05);
+}
+
+.btncont{
+    width: 100%;
+    max-width: 490px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 0 20px;
+}
+
+button{
+    padding: 14px 35px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg,#22c55e,#16a34a);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,.3);
+}
+
+button:hover{
+    transform: scale(1.08);
+    background: linear-gradient(135deg,#16a34a,#15803d);
+}
+
+button:active{
+    transform: scale(.96);
+}
+@media (max-width: 480px) {
+  #dashbord {
+    font-size: 28px;
+    height: 70px;
+  }
+  .square {
+    font-size: 36px;
+  }
+  button {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+}
